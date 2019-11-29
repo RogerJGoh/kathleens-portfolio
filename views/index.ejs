@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/text_animation.css' />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div style="z-index: 2;" id="loader_wrapper1" class="loader_wrapper">
+      <span class="loader"></span>
+    </div>
+
+    <div style="z-index: 1;" id="loader_wrapper2" class="loader_wrapper">
+
+      <div class="content floating_text">
+        <div class="content__container">
+          <ul id="content__container__list1" class="content__container__list">
+            <li class="content__container__list__item">&nbsp</li>
+            <li class="content__container__list__item">Wha</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content floating_text">
+        <div class="content__container">
+          <ul id="content__container__list2" class="content__container__list">
+            <li class="content__container__list__item">&nbsp</li>
+            <li class="content__container__list__item">du</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content floating_text">
+        <div class="content__container">
+          <ul id="content__container__list3" class="content__container__list">
+            <li class="content__container__list__item">&nbsp</li>
+            <li class="content__container__list__item">hek</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //slow fadeout of loading screen after few seconds
+      setTimeout(function(){
+        jQuery("#loader_wrapper1").fadeOut("slow");
+        nextLoader()
+      }, 2000)
+
+      function nextLoader(){
+
+        //floating word animations
+        setTimeout(function(){
+          document.getElementById("content__container__list1").style.animation = 'change 10s'
+        }, 1000)
+
+        setTimeout(function(){
+          document.getElementById("content__container__list2").style.animation = 'change 10s'
+        }, 1250)
+
+        setTimeout(function(){
+          document.getElementById("content__container__list3").style.animation = 'change 10s'
+        }, 1500)
+
+        //fadeout loading screen
+        setTimeout(function(){
+          jQuery("#loader_wrapper2").fadeOut("slow");
+        }, 4000)
+      }
+
+    </script>
+  </body>
+  
+</html>
+
