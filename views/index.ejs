@@ -11,7 +11,51 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <div style="z-index: 2;" id="loader_wrapper1" class="loader_wrapper">
+    <div id="cursor_container" class="cursor_container"></div>
+    <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="visibility: hidden; position: absolute; width:32px; height:32px;">
+
+    <!-- Make cursor: change then on enter start timer to change css -->
+
+    <script>
+      //if enter and leave events trigger prematurely
+      //https://stackoverflow.com/questions/32024888/multiple-mouseenter-mouseleave-events-fired-on-overlapping-divs
+
+      var inContainer = false;
+      $("#cursor_container").on("mouseenter",function(e){
+        if(inContainer==false){
+          $("#cursor_substitute").css("visibility", "visible");
+          inContainer = true;
+          console.log("in")
+
+          //start animation and then end
+          document.getElementById("cursor_substitute").src = "/images/cursor_substitute.gif";
+          setTimeout(function(){
+            document.getElementById("cursor_substitute").src = "/images/cursor_substitute.png";
+          }, 900)
+
+        }
+      });
+      $("#cursor_container").on("mouseleave",function(e){
+        if(inContainer==true){
+          $("#cursor_substitute").css("visibility", "hidden");
+          inContainer = false;
+          console.log("out")
+        }
+      });
+      $(document).mousemove(function(e){
+        if(inContainer==true){
+          $("#cursor_substitute").css({left:e.pageX-16, top:e.pageY-16});
+        }
+      });
+
+    </script>
+
+    <!-- unhide cursor image onEnter -->
+    <!-- start timer -->
+    <!-- hide cursor image onLeave -->
+
+    <!-- Pre-Loaders -->
+    <!-- <div style="z-index: 2;" id="loader_wrapper1" class="loader_wrapper">
       <span class="loader"></span>
     </div>
 
@@ -43,35 +87,35 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script>
-      //slow fadeout of loading screen after few seconds
-      setTimeout(function(){
-        jQuery("#loader_wrapper1").fadeOut("slow");
-        nextLoader()
-      }, 2000)
+      // //slow fadeout of loading screen after few seconds
+      // setTimeout(function(){
+      //   $("#loader_wrapper1").fadeOut("slow");
+      //   nextLoader()
+      // }, 2000)
 
-      function nextLoader(){
+      // function nextLoader(){
 
-        //floating word animations
-        setTimeout(function(){
-          document.getElementById("content__container__list1").style.animation = 'change 10s'
-        }, 1000)
+      //   //floating word animations
+      //   setTimeout(function(){
+      //     document.getElementById("content__container__list1").style.animation = 'change 10s'
+      //   }, 1000)
 
-        setTimeout(function(){
-          document.getElementById("content__container__list2").style.animation = 'change 10s'
-        }, 1250)
+      //   setTimeout(function(){
+      //     document.getElementById("content__container__list2").style.animation = 'change 10s'
+      //   }, 1250)
 
-        setTimeout(function(){
-          document.getElementById("content__container__list3").style.animation = 'change 10s'
-        }, 1500)
+      //   setTimeout(function(){
+      //     document.getElementById("content__container__list3").style.animation = 'change 10s'
+      //   }, 1500)
 
-        //fadeout loading screen
-        setTimeout(function(){
-          jQuery("#loader_wrapper2").fadeOut("slow");
-        }, 4000)
-      }
+      //   //fadeout loading screen
+      //   setTimeout(function(){
+      //     $("#loader_wrapper2").fadeOut("slow");
+      //   }, 4000)
+      // }
 
     </script>
   </body>
