@@ -6,6 +6,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/text_animation.css' />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
   </head>
   <body>
     <h1><%= title %></h1>
@@ -14,9 +19,74 @@
     <div id="cursor_container" class="cursor_container"></div>
     <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="visibility: hidden; position: absolute; width:32px; height:32px;">
 
-    <!-- Make cursor: change then on enter start timer to change css -->
+    <div class="row">
+      <div class="col-sm-4" style="text-align: center;">
+        <div class = "row" style="display: inline-block;">
+          <img src="/images/placeholder1.jpg">
+          <span class="">Korean Lady</span>
+        </div>
+        <div class = "row" style="display: inline-block">
+          <img src="/images/placeholder4.jpg">
+          <span>Korean Lady</span>
+        </div>
+        <div class = "row" style="display: inline-block">
+            <img src="/images/placeholder3.jpg">
+            <span>Korean Lady</span>
+          </div>
+      </div>
+      <div class="col-sm-4">
+        <div class = "row" style="display: inline-block">
+          <img src="/images/placeholder3.jpg">
+          <span>Korean Lady</span>
+        </div>
+        <div class = "row" style="display: inline-block">
+            <img src="/images/placeholder2.jpg">
+            <span>Korean Lady</span>
+          </div>
+          <div class = "row" style="display: inline-block">
+              <img src="/images/placeholder1.jpg">
+              <span>Korean Lady</span>
+            </div>
+      </div>
+      <div class="col-sm-4">
+        <div class = "row" style="display: inline-block">
+          <img src="/images/placeholder2.jpg">
+          <span>Korean Lady</span>
+        </div>
+        <div class = "row" style="display: inline-block">
+            <img src="/images/placeholder3.jpg">
+            <span>Korean Lady</span>
+          </div>
+          <div class = "row" style="display: inline-block">
+              <img src="/images/placeholder4.jpg">
+              <span>Korean Lady</span>
+            </div>
+      </div>
+    </div>
+
+    <div id="sidenav_trigger" class="sidenav_trigger"></div>
+    <div id="sidenav" class="sidenav">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    
+    <script>
+      //sidenav
+      $("#sidenav_trigger").on("mouseenter",function(e){
+        document.getElementById("sidenav").style.width = "80px";
+      });
+
+      $("#sidenav_trigger").on("mouseleave",function(e){
+        document.getElementById("sidenav").style.width = "0px";
+      });
+    </script>
 
     <script>
+      //cursor animations
+
       //if enter and leave events trigger prematurely
       //https://stackoverflow.com/questions/32024888/multiple-mouseenter-mouseleave-events-fired-on-overlapping-divs
 
@@ -90,7 +160,9 @@
     </div> -->
 
     <script>
-      // //slow fadeout of loading screen after few seconds
+      //preloaders
+
+      //slow fadeout of loading screen after few seconds
       // setTimeout(function(){
       //   $("#loader_wrapper1").fadeOut("slow");
       //   nextLoader()
