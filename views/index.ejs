@@ -3,62 +3,62 @@
   <head>
     <title><%= title %></title>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/text_animation.css' />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/text_animation.css' />
 
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <div id="cursor_container" class="cursor_container"></div>
-    <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="visibility: hidden; position: absolute; width:32px; height:32px;">
+    <!-- <div id="cursor_container" class="cursor_container art"></div> -->
+    <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="z-index: 2; visibility: hidden; position: absolute; width:32px; height:32px;">
 
     <div class="row">
       <div class="col-sm-4" style="text-align: center;">
         <div class = "row" style="display: inline-block;">
-          <img src="/images/placeholder1.jpg">
+          <img class="art" src="/images/placeholder1.jpg">
           <span class="">Korean Lady</span>
         </div>
         <div class = "row" style="display: inline-block">
-          <img src="/images/placeholder4.jpg">
+          <img class="art" src="/images/placeholder4.jpg">
           <span>Korean Lady</span>
         </div>
         <div class = "row" style="display: inline-block">
-            <img src="/images/placeholder3.jpg">
+            <img class="art" src="/images/placeholder3.jpg">
             <span>Korean Lady</span>
           </div>
       </div>
       <div class="col-sm-4">
         <div class = "row" style="display: inline-block">
-          <img src="/images/placeholder3.jpg">
+          <img class="art" src="/images/placeholder3.jpg">
           <span>Korean Lady</span>
         </div>
         <div class = "row" style="display: inline-block">
-            <img src="/images/placeholder2.jpg">
+            <img class="art" src="/images/placeholder2.jpg">
             <span>Korean Lady</span>
           </div>
           <div class = "row" style="display: inline-block">
-              <img src="/images/placeholder1.jpg">
+              <img class="art" src="/images/placeholder1.jpg">
               <span>Korean Lady</span>
             </div>
       </div>
       <div class="col-sm-4">
         <div class = "row" style="display: inline-block">
-          <img src="/images/placeholder2.jpg">
+          <img class="art" src="/images/placeholder2.jpg">
           <span>Korean Lady</span>
         </div>
         <div class = "row" style="display: inline-block">
-            <img src="/images/placeholder3.jpg">
+            <img class="art" src="/images/placeholder3.jpg">
             <span>Korean Lady</span>
           </div>
           <div class = "row" style="display: inline-block">
-              <img src="/images/placeholder4.jpg">
+              <img class="art" src="/images/placeholder4.jpg">
               <span>Korean Lady</span>
             </div>
       </div>
@@ -73,56 +73,8 @@
       <a href="#">Contact</a>
     </div>
     
-    <script>
-      //sidenav
-      $("#sidenav_trigger").on("mouseenter",function(e){
-        document.getElementById("sidenav").style.width = "80px";
-      });
-
-      $("#sidenav_trigger").on("mouseleave",function(e){
-        document.getElementById("sidenav").style.width = "0px";
-      });
-    </script>
-
-    <script>
-      //cursor animations
-
-      //if enter and leave events trigger prematurely
-      //https://stackoverflow.com/questions/32024888/multiple-mouseenter-mouseleave-events-fired-on-overlapping-divs
-
-      var inContainer = false;
-      $("#cursor_container").on("mouseenter",function(e){
-        if(inContainer==false){
-          $("#cursor_substitute").css("visibility", "visible");
-          inContainer = true;
-          console.log("in")
-
-          //start animation and then end
-          document.getElementById("cursor_substitute").src = "/images/cursor_substitute.gif";
-          setTimeout(function(){
-            document.getElementById("cursor_substitute").src = "/images/cursor_substitute.png";
-          }, 900)
-
-        }
-      });
-      $("#cursor_container").on("mouseleave",function(e){
-        if(inContainer==true){
-          $("#cursor_substitute").css("visibility", "hidden");
-          inContainer = false;
-          console.log("out")
-        }
-      });
-      $(document).mousemove(function(e){
-        if(inContainer==true){
-          $("#cursor_substitute").css({left:e.pageX-16, top:e.pageY-16});
-        }
-      });
-
-    </script>
-
-    <!-- unhide cursor image onEnter -->
-    <!-- start timer -->
-    <!-- hide cursor image onLeave -->
+    <script type="text/javascript" src="/javascripts/sidenav.js"></script>
+    <script type="text/javascript" src="/javascripts/cursor_animations.js"></script>
 
     <!-- Pre-Loaders -->
     <!-- <div style="z-index: 2;" id="loader_wrapper1" class="loader_wrapper">
@@ -159,37 +111,7 @@
       </div>
     </div> -->
 
-    <script>
-      //preloaders
-
-      //slow fadeout of loading screen after few seconds
-      // setTimeout(function(){
-      //   $("#loader_wrapper1").fadeOut("slow");
-      //   nextLoader()
-      // }, 2000)
-
-      // function nextLoader(){
-
-      //   //floating word animations
-      //   setTimeout(function(){
-      //     document.getElementById("content__container__list1").style.animation = 'change 10s'
-      //   }, 1000)
-
-      //   setTimeout(function(){
-      //     document.getElementById("content__container__list2").style.animation = 'change 10s'
-      //   }, 1250)
-
-      //   setTimeout(function(){
-      //     document.getElementById("content__container__list3").style.animation = 'change 10s'
-      //   }, 1500)
-
-      //   //fadeout loading screen
-      //   setTimeout(function(){
-      //     $("#loader_wrapper2").fadeOut("slow");
-      //   }, 4000)
-      // }
-
-    </script>
+    <script type="text/javascript" src="/javascripts/preloaders.js"></script>
   </body>
   
 </html>
