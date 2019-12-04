@@ -12,11 +12,23 @@ a {
   color: white;
 }
 
-.screensized_container{
-  width:100vw;
-  height:100vh;
-  padding: 50px;
+/* Portrait */
+@media screen and (orientation:portrait) {
+  .screensized_container{
+    
+    padding: 100px;
+  }
 }
+/* Landscape */
+@media screen and (orientation:landscape) {
+  .screensized_container{
+    width:100vw;
+    height:100vh;
+    padding: 50px;
+  }
+}
+
+
 
 .title_container{
   position: relative;
@@ -53,6 +65,9 @@ a {
   margin-bottom: 5px;
 }
 
+.row{
+  flex-wrap: nowrap;
+}
 
 .art {
   display: block;
