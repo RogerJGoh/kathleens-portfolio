@@ -1,15 +1,21 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font: 20px "JMH-Typewriter", Helvetica, Arial, sans-serif;
   background-color: #332037;
-  /* color:white; */
   color: black;
+  overflow-x: hidden;
 }
 
 a {
   /* color: #00B7FF; */
   color: white;
+}
+
+.screensized_container{
+  width:100vw;
+  height:100vh;
+  padding: 50px;
 }
 
 .title_container{
@@ -28,22 +34,25 @@ a {
   font-size: 30px;
 }
 
-.col-sm-4{
+.col-sm-3{
   /* background-color: pink; */
   text-align: center;
-  max-width: 25vw;
-  /* padding: 5px; */
+  max-width: 20vw;
+  margin: 5px;
+}
+.col-sm-5{
+  /* background-color: pink; */
+  text-align: center;
+  max-width: 40vw;
+  margin: 5px;
 }
 
 .post{
   display: inline-block;
-  background-color:white;
-  margin-bottom: 20px;
+  /* background-color:white; */
+  margin-bottom: 5px;
 }
 
-.row{
-  padding: 15px;
-}
 
 .art {
   display: block;
@@ -53,9 +62,14 @@ a {
   cursor: none;
 }
 
-.caption{
+.asset{
   display: block;
-  padding: 15px;
+  height: auto;
+  object-fit: contain;
+}
+
+.landscape{
+  max-width:40vw;
 }
 
 .tapeleft{
