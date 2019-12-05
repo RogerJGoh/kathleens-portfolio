@@ -8,77 +8,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel='stylesheet' href='/stylesheets/commission work.css' />
+    <link rel='stylesheet' href='/stylesheets/standard_style.css' />
     <link rel='stylesheet' href='/stylesheets/text_animation.css' />
 
   </head>
   <body>
-    <!-- <h1 style="text-align: center;">Concept Art</h1> -->
-    <!-- <p>Welcome to <%= title %></p> -->
-
     <div class="title_container" style="text-align: center">
-      <img src="/images/assets/brushstroke1.png" height:100%; top:0;>
-      <div class="title">Concept Art</div>
+      <img src="/images/assets/tornpage.png" style="height:27vh; top:0;">
+      <div class="title" style="top:57%; font-size: 3vh;">Commission Work</div>
     </div>
 
-    <!-- <div id="cursor_container" class="cursor_container art"></div> -->
     <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="z-index: 2; visibility: hidden; position: absolute; width:32px; height:32px;">
 
+    <!-- Polaroids -->
     <div class="container" style="justify-content: center; display: flex;">
       <div class="row">
-        <div class="col-sm-4">
-          <div class = "row post">
+        <div class="col-sm-3 polaroid_col">
+          <div class = "row polaroid post">
             <img class="tapeleft" src="images/assets/tape3.png">
-            <img class="art" src="/images/art/portrait.jpg">
-            <span class="caption">Caption</span>
+            <img class="art" src="/images/art/45.jpg">
+            <span class="caption"></span>
           </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/campsite.jpg">
-            <span class="caption">Caption</span>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class = "row post">
-            <img class="art" src="/images/art/chibi asha colored.jpg">
-            <span class="caption">Caption</span>
-          </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/chibi asha.jpg">
-            <span class="caption">Caption</span>
-          </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/models2.jpg">
-            <span class="caption">Caption</span>
-          </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/bridge.jpg">
-            <span class="caption">Caption</span>
-          </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/corvus.jpg">
-            <span class="caption">Caption</span>
+          <div class = "row polaroid post">
+            <img class="art" src="/images/art/ela without lineart.jpg">
+            <span class="caption"></span>
           </div>
         </div>
 
-        <div class="col-sm-4">
-          <div class = "row post">
+        <div class="col-sm-3 polaroid_col">
+          <div class = "row polaroid post">
+            <img class="art" src="/images/art/mann.jpg">
+            <span class="caption"></span>
+          </div>
+          <div class = "row polaroid post">
+            <img class="art" src="/images/art/dokkiandvigil5.jpg">
+            <span class="caption"></span>
+          </div>
+        </div>
+
+        <div class="col-sm-3 polaroid_col">
+          <div class = "row polaroid post">
             <img class="taperight" src="images/assets/tape4.png">
-            <img class="art" src="/images/art/dark woods.jpg">
-            <span class="caption">Caption</span>
+            <img class="art" src="/images/art/Riven.jpg">
+            <span class="caption"></span>
           </div>
-          <div class = "row post">
-              <img class="art" src="/images/placeholder3.jpg">
-              <span class="caption">Caption</span>
+          <div class = "row polaroid post">
+              <img class="art" src="/images/art/IMG_20170620_145102_712.jpg">
+              <span class="caption"></span>
             </div>
         </div>
+      </div>
+    </div>
+
+    <!-- ASA ESA -->
+    <div class="commission_container">
+      <img class="landscape-4" style="right: 28vw; top: 80px; position: absolute; " src="/images/art/Main Page.jpg">
+      <img class="landscape-4" style="right: 15vw; top: 350px; position: absolute;" src="/images/art/smartcity1-2.jpg">
+      <div class="title_container" style="z-index: 1; left: 15vw; top: 300px; position: absolute; width: 42vw; height: 13vh;">
+        <img style="width: 100%; height: 100%;" src="/images/assets/brushstroke1.png">
+        <div class="title" style="width: 100%; font-size: 2.5vh;">SMA in collaboration with ASA ESA</div>
       </div>
     </div>
 
     <div class="hamburger">&#9776</div>
     <div id="sidenav_trigger" class="sidenav_trigger"></div>
     <div id="sidenav" class="sidenav">
-      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
@@ -87,43 +81,6 @@
     
     <script type="text/javascript" src="/javascripts/sidenav.js"></script>
     <script type="text/javascript" src="/javascripts/cursor_animations.js"></script>
-
-    <!-- Pre-Loaders -->
-    <!-- <div style="z-index: 2;" id="loader_wrapper1" class="loader_wrapper">
-      <span class="loader"></span>
-    </div>
-
-    <div style="z-index: 1;" id="loader_wrapper2" class="loader_wrapper">
-
-      <div class="content floating_text">
-        <div class="content__container">
-          <ul id="content__container__list1" class="content__container__list">
-            <li class="content__container__list__item">&nbsp</li>
-            <li class="content__container__list__item">Wha</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="content floating_text">
-        <div class="content__container">
-          <ul id="content__container__list2" class="content__container__list">
-            <li class="content__container__list__item">&nbsp</li>
-            <li class="content__container__list__item">du</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="content floating_text">
-        <div class="content__container">
-          <ul id="content__container__list3" class="content__container__list">
-            <li class="content__container__list__item">&nbsp</li>
-            <li class="content__container__list__item">hek</li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
-    <script type="text/javascript" src="/javascripts/preloaders.js"></script>
   </body>
   
 </html>
