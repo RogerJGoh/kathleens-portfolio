@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/standard_style.css' />
+    <link rel='stylesheet' href='/stylesheets/text_animation.css' />
+    <link rel='stylesheet' href='/stylesheets/about_me.css' />
+
+  </head>
+  <body>
+
+    <div class="screensized_container container" style="display: flex; justify-content: center; flex-direction: column;">
+        <div style="display: box; text-align: center;">
+            <div class="row title_container">
+                <img style="position: absolute; transform: translate(-110px, -100px);" src="/images/assets/star1.png">
+                <img src="/images/assets/brushstroke2.png" style="width: 500px; height: 110px; top:0;">
+                <div class="title" style="top: 41%; transform: translate(-50%, -50%) rotate(-3deg); font-size: 30px; color: #332037">KATHLEEN</div>
+                <img style="position: absolute; transform: translate(70px, -40px);" src="/images/assets/star2.png">
+            </div>
+            <div class="row" style="font-size: 25px; color: white;">ABOUT ME</div>
+        </div>
+    </div>
+
+    <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="z-index: 2; visibility: hidden; position: absolute; width:32px; height:32px;">
+
+    <div class="hamburger">&#9776</div>
+    <div id="sidenav_trigger" class="sidenav_trigger"></div>
+    <div id="sidenav" class="sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    
+    <script type="text/javascript" src="/javascripts/sidenav.js"></script>
+    <script type="text/javascript" src="/javascripts/cursor_animations.js"></script>
+  </body>
+  
+</html>
