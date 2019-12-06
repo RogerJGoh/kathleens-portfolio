@@ -14,8 +14,17 @@ a {
 
 /* Portrait */
 @media screen and (orientation:portrait) {
+  .aboutme_container{
+    padding: 100px;
+    padding-bottom: 180px;
+  }
+  
   .screensized_container{
     padding: 100px;
+  }
+
+  .works_container{
+    padding: 0px 100px;
   }
 
   .commission_container{
@@ -28,6 +37,19 @@ a {
 }
 /* Landscape */
 @media screen and (orientation:landscape) {
+  
+  .aboutme_container{
+    width:100vw;
+    height:68vh;
+    padding-left:100px;
+  }
+
+  .works_container{
+    width:100vw;
+    height:85vh;
+    padding:50px;
+  }
+  
   .screensized_container{
     width:100vw;
     height:100vh;
@@ -148,6 +170,15 @@ a {
   top: -60px;
   width: 250px;
   height: 150px;
+  z-index: 1;
+}
+
+.tapemiddle{
+  position: absolute;
+  top:-25px;
+  left:50%;
+  transform: translate(-50%, 0);
+  width:120px;
   z-index: 1;
 }
 

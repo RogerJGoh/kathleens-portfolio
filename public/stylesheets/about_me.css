@@ -7,7 +7,46 @@
     font-size: 15px;
 }
 
+.works_header{
+    margin-bottom: 28px;
+    font-size: 18px;
+}
+
 .col-sm-3{
     margin-right: 25px;
     transform: translate(-25px)
+}
+
+.bar{
+    width: 100vw;
+    height: 70px;
+    background-color: white;
+    left:0px;
+    bottom:0px;
+    position: absolute;
+}
+
+.barart{
+    position: absolute;
+    bottom:0px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: auto;
+    margin-bottom:-152px;
+}
+
+.software{
+    padding:10px;
+}
+
+.rect{
+    width: 420px;
+    height: 220px;
+    object-fit: cover;
+    /* object-position: 50px; */
+}
+
+.col-lg-4{
+    margin: 50px;
 }
