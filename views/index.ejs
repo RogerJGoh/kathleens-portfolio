@@ -8,74 +8,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel='stylesheet' href='/stylesheets/concept art.css' />
+    <link rel='stylesheet' href='/stylesheets/standard_style.css' />
     <link rel='stylesheet' href='/stylesheets/text_animation.css' />
 
   </head>
   <body>
-    <!-- <h1 style="text-align: center;">Concept Art</h1> -->
-    <!-- <p>Welcome to <%= title %></p> -->
-
-    <div class="title_container" style="text-align: center">
-      <img src="/images/assets/brushstroke1.png" height:100%; top:0;>
-      <div class="title">Concept Art</div>
-    </div>
-
-    <!-- <div id="cursor_container" class="cursor_container art"></div> -->
-    <img src="/images/cursor_substitute.gif" id="cursor_substitute" class="cursor_substitute" style="z-index: 2; visibility: hidden; position: absolute; width:32px; height:32px;">
-
-    <div class="container" style="justify-content: center; display: flex;">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class = "row post">
-            <img class="tapeleft" src="images/assets/tape3.png">
-            <img class="art" src="/images/art/portrait.jpg">
-            
-          </div>
-          <div class = "row post">
-            <img class="art" src="/images/art/campsite.jpg">
-            
-          </div>
-        </div>
-
-        <div class="col-sm-5">
-          <div class = "row post">
-            <img class="landscape art" src="/images/art/chibi asha colored.jpg">
-            
-          </div>
-          <div class = "row post">
-            <img class="landscape art" src="/images/art/chibi asha.jpg">
-            
-          </div>
-          <div class = "row post">
-            <img class="landscape art" src="/images/art/models2.jpg">
-            
-          </div>
-          <div class = "row post">
-            <img class="landscape art" src="/images/art/bridge.jpg">
-            
-          </div>
-          <div class = "row post">
-            <img class="landscape art" src="/images/art/corvus.jpg">
-            
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-          <div class = "row post">
-            <img class="taperight" src="images/assets/tape4.png">
-            <img class="art" src="/images/art/dark woods.jpg">
-            
+  <div>
+    <div class="screensized_container container" style="max-width: 1080px;">
+      <div style="position: relative;">
+        <img class="" style="right: 3%; top: 145px; position: absolute; " src="/images/assets/homepagepolaroid.png">
+        <img class="" style="height: 300px; transform: rotate(3deg); right: 5%; top: 220px; position: absolute; " src="/images/assets/profile.png">
+        <div class="title_container" style="z-index: 1; right: 45%; top: 300px; position: absolute; width: 50%; height: 100px;">
+          <img style="width: 100%; height: 100%;" src="/images/assets/brushstroke1.png">
+          <div class="title" style="line-height: 25px; width: 100%; font-size: 26px; top: 55%;">
+            <a style="color:black;" href="http://localhost:3000/about_me">Kathleen Nita</a><br>
+            <span style="font-size: 13px;">WELCOME TO MY PORTFOILO</span>
           </div>
         </div>
       </div>
     </div>
+  <div>
 
     <div class="hamburger">&#9776</div>
     <div id="sidenav_trigger" class="sidenav_trigger"></div>
-    <div id="sidenav" class="sidenav">
+    <div id="sidenav" class="sidenav" style="z-index: 10;">
       <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-      <a href="#">About</a>
+      <a href="http://localhost:3000/about_me">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a>
