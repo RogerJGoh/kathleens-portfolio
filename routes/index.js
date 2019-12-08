@@ -18,4 +18,8 @@ router.get('/not_a_fairy_tale', function(req, res, next) {
   res.render('not a fairy tale', { title: "Kat's Portfolio" });
 });
 
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: "Kat's Portfolio" });
+});
+
 module.exports = router;
