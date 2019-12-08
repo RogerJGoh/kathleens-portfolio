@@ -16,6 +16,16 @@ a {
   visibility: hidden;
 }
 
+.zoom{
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover{
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 2;
+  position: relative;
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
   .aboutme_container{
@@ -219,6 +229,11 @@ a {
 
 .cursor_substitute{
   pointer-events: none;
+  z-index: 3;
+  visibility: hidden; 
+  position: absolute; 
+  width:32px; 
+  height:32px;
 }
 
 
