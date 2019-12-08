@@ -1,0 +1,7 @@
+.art {
+    display: block;
+    max-width:20vw;
+    height: auto;
+    object-fit: contain;
+    cursor: none;
+}

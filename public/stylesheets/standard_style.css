@@ -128,7 +128,7 @@ a {
 
 .art {
   display: block;
-  max-width:20vw;
+  /* max-width:20vw; */
   height: auto;
   object-fit: contain;
   cursor: none;
@@ -146,8 +146,25 @@ a {
   margin: 0px 20px;
 }
 
-.landscape{
-  max-width:40vw;
+.square{
+  width: 200px;
+  /* height: 200px; */
+  height: auto;
+}
+
+.portrait{
+  width: 196px;
+  /* height: 260px; */
+  height: auto;
+
+}
+
+.landscape-3{
+  /* max-width:40vw; */
+  width: 400px;
+  /* height: 200px; */
+  height: auto;
+
 }
 
 .landscape-4{

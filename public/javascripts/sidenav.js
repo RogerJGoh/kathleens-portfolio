@@ -6,9 +6,8 @@ $("#hamburger").on("click",function(e){
     }else{
         document.getElementById("sidenav").style.width = "0px";
     }
-    
 });
 
-// $("#hamburger").on("click",function(e){
-//     document.getElementById("sidenav").style.width = "0px";
-// });
+$(".closenav").on("click",function(e){
+    document.getElementById("sidenav").style.width = "0px";
+});
