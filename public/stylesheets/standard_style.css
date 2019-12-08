@@ -26,6 +26,16 @@ a {
   position: relative;
 }
 
+.zoom-sm{
+  transition: transform .2s; /* Animation */
+}
+
+.zoom-sm:hover{
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 2;
+  position: relative;
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
   .aboutme_container{
@@ -38,7 +48,7 @@ a {
   }
 
   .works_container{
-    padding: 0px 100px;
+    padding: 100px 100px;
   }
 
   .commission_container{
@@ -220,7 +230,7 @@ a {
 }
 
 .socialrow{
-  margin: 20px;
+  margin: 60px;
   font-size: 15px;
   line-height: 30px;
 }
