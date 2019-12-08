@@ -12,6 +12,10 @@ a {
   color: white;
 }
 
+.animated{
+  visibility: hidden;
+}
+
 /* Portrait */
 @media screen and (orientation:portrait) {
   .aboutme_container{
@@ -106,7 +110,7 @@ a {
 
 .post{
   display: inline-block;
-  background-color:white;
+  /* background-color:white; */
   /* background-image: url("/images/assets/polaroid.png");
   background-size: cover; */
   margin-bottom: 5px;
@@ -296,3 +300,4 @@ a {
   75% { transform: rotate(360deg);}
   100% { transform: rotate(360deg);}
 }
+

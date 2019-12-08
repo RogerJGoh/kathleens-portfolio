@@ -5,3 +5,11 @@
     object-fit: contain;
     cursor: none;
 }
+
+.post{
+    display: inline-block;
+    background-color:white;
+    /* background-image: url("/images/assets/polaroid.png");
+    background-size: cover; */
+    margin-bottom: 5px;
+  }
