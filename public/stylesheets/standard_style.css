@@ -171,23 +171,27 @@ a {
 }
 
 .square{
-  width: 200px;
+  /* width: 200px; */
   /* height: 200px; */
+  width: 20vw;
   height: auto;
 }
 
 .portrait{
-  width: 196px;
+  /* width: 196px; */
   /* height: 260px; */
+  width: 20vw;
   height: auto;
 
 }
 
 .landscape-3{
   /* max-width:40vw; */
-  width: 400px;
+  /* width: 400px; */
   /* height: 200px; */
+  width: 40vw;
   height: auto;
+  /* margin: 0px 30px; */
 
 }
 
@@ -237,6 +241,12 @@ a {
 
 @font-face {font-family: 'JMH-Typewriter'; 
   src: url('/fonts/JMH-Typewriter.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {font-family: 'Catamaran'; 
+  src: url('/fonts/Catamaran-Light.ttf') format('truetype'); 
   font-weight: normal; 
   font-style: normal; 
 }
@@ -336,5 +346,11 @@ a {
   50% { transform: rotate(180deg);}
   75% { transform: rotate(360deg);}
   100% { transform: rotate(360deg);}
+}
+
+.texture_art {
+  width: 500px;
+  height: 250px;
+  padding: 0 20px;
 }
 
